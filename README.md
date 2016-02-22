@@ -27,5 +27,5 @@ server.start()
 
 ## License
 
-> Created by Daniel Jones <http://www.erase.net> 
+> Created by Daniel Jones <http://www.erase.net>  
 > Available under the terms of the MIT License.

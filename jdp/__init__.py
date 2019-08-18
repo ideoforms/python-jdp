@@ -1,1 +1,1 @@
-from jdp import *
+from .jdp import Server, Client

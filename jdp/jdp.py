@@ -3,14 +3,14 @@ import socket
 import json
 
 class Server:
-	def __init__(self, port = 11000, hostname = "0.0.0.0"):
+	def __init__(self, port=11000, hostname="0.0.0.0"):
 		self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 		self.sock.bind((hostname, port))
 		self.thread = None
 		self.callbacks = []
 
 	def start(self):
-		self.thread = threading.Thread(target = self.server_thread)
+		self.thread = threading.Thread(target=self.server_thread)
 		self.thread.setDaemon(True)
 		self.thread.start()
 	
@@ -31,4 +31,5 @@ class Client:
 
 	def send(self, data):
 		data_string = json.dumps(data)
+		data_string = data_string.encode()
 		self.sock.sendto(data_string, (self.hostname, self.port))

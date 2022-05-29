@@ -1,16 +1,15 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python3
 
 import jdp
 import time
 import pprint
 
 def read(data):
-	# print data["hello"]
-	pprint.pprint(data)
+    pprint.pprint(data)
 
 server = jdp.Server(11000)
 server.add_callback(read)
 server.start()
 
 while True:
-	time.sleep(0.1)
+    time.sleep(0.1)

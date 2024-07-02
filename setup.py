@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name = 'jdp',
-    version = '0.1.0',
+    version = '0.0.1',
     description = 'JSON Datagram Protocol',
     long_description = 'JSON Datagram Protocol, a lightweight communication protocol encapsulating JSON objects in individual UDP datagrams.',
     author = 'Daniel Jones',
